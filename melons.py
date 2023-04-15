@@ -1,6 +1,6 @@
 """Classes for melon orders."""
 from random import randint
-from datetime import *
+from datetime import datetime
 
 
 class MelonOrder:
