@@ -3,8 +3,17 @@ from random import randint
 from datetime import datetime
 
 
+class TooManyMelonsOrder(Exception):
+    pass
+
+
 class MelonOrder:
     def __init__(self, species, qty, order_type, tax, is_x_mas=False):
+        if qty <= 100:
+            pass
+        else:
+            raise TooManyMelonsOrder('No more than 100 melons!')
+
         self.species = species
         self.qty = qty
         self.order_type = order_type
